@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Pretendard;
+  src: url("./fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+:root { font-family: Pretendard, sans-serif; color: #272731; background: #fffdf6; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button { font: inherit; }
+.hero { position: relative; isolation: isolate; container-type: inline-size; width: 100%; aspect-ratio: 1920 / 1080; overflow: hidden; background: #fffdf6; }
+.hero-visual { position: absolute; inset: 0; z-index: -1; }
+.hero-video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.hero-header { position: absolute; top: 0; left: 4.1%; right: 4.1%; height: 8.33%; border-bottom: 1px solid #666; }
+.hero-menu { display: flex; align-items: center; justify-content: space-between; width: 28.65cqw; height: 100%; padding: 0; margin: 0 auto; list-style: none; }
+.hero-header nav { height: 100%; }
+.hero-menu span { display: block; padding-block: 1cqw; font-size: .8333cqw; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; white-space: nowrap; }
+.hero-copy { position: absolute; top: 37.3%; left: 7.45%; }
+h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-spacing: 0; }
+.hero-line { display: block; white-space: nowrap; }
+.word-slowly { color: #4b8ce5; font-size: 1.13em; }
+.word-lasting { color: #aa80dd; }
+.phrase { color: #df6861; }
+.copy-rule { display: block; width: 5.94cqw; height: 1px; margin-top: 2.1cqw; background: #666; }
+.signature { margin: 1.4cqw 0 0; color: #000; font-size: 1.3cqw; font-weight: 600; letter-spacing: .31em; line-height: 1.4; white-space: nowrap; }
+.video-control { position: absolute; bottom: 18px; right: 18px; min-width: 44px; min-height: 44px; padding: 8px 14px; border: 1px solid #27273155; border-radius: 24px; background: #fffdf6e6; color: #272731; font-size: 12px; cursor: pointer; }
+.video-control:focus-visible { outline: 2px solid #4b8ce5; outline-offset: 4px; }
+.video-control[hidden] { display: none; }
+@media (min-width: 761px) and (max-width: 1180px) {
+  .hero-menu { width: 42cqw; }
+  .hero-menu span { font-size: 1.15cqw; }
+}
+@media (max-width: 760px) {
+  .hero { aspect-ratio: auto; min-height: 700px; height: 100svh; max-height: 1000px; background: linear-gradient(145deg, #fff0ef 0%, #fffdf6 28%, #edf5ff 100%); }
+  .hero-header { left: 6%; right: 6%; height: 64px; border-color: #27273133; }
+  .hero-menu { width: 100%; }
+  .hero-menu span { font-size: clamp(10px, 2.6cqw, 14px); letter-spacing: .12em; }
+  .hero-copy { top: 94px; left: 5%; width: 90%; text-align: center; }
+  h1 { font-size: 7.1cqw; line-height: 1.22; }
+  .hero-line:last-child { margin-top: 8px; }
+  .hero-line:last-child .phrase { display: block; }
+  .copy-rule { width: 10cqw; margin: 18px auto 0; }
+  .signature { font-size: clamp(8px, 2.2cqw, 14px); letter-spacing: .24em; margin: 13px 0 0; }
+  .hero-visual { top: 290px; }
+  .hero-visual::after { content: ""; position: absolute; inset: 0 0 auto; height: 70px; background: linear-gradient(#fffdf6, transparent); pointer-events: none; }
+  .hero-video { object-position: 83% center; }
+  .video-control { right: 12px; bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
