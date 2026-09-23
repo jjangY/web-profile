@@ -19,10 +19,10 @@ button { font: inherit; }
 .hero-copy { position: absolute; top: 37.3%; left: 7.45%; }
 h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-spacing: 0; }
 .hero-line { display: block; white-space: nowrap; }
-.word-slowly { color: #4b8ce5; font-size: 1.13em; }
-.word-lasting { color: #aa80dd; }
-.phrase { color: #df6861; }
-.copy-rule { display: block; width: 5.94cqw; height: 1px; margin-top: 2.1cqw; background: #666; }
+.word-slowly { color: #000; font-size: 1.13em; }
+.word-lasting { color: #000; }
+.phrase { color: #000; }
+/* .copy-rule { display: block; width: 5.94cqw; height: 1px; margin-top: 2.1cqw; background: #666; } */
 .signature { margin: 1.4cqw 0 0; color: #000; font-size: 1.3cqw; font-weight: 600; letter-spacing: .31em; line-height: 1.4; white-space: nowrap; }
 .video-control { position: absolute; bottom: 18px; right: 18px; min-width: 44px; min-height: 44px; padding: 8px 14px; border: 1px solid #27273155; border-radius: 24px; background: #fffdf6e6; color: #272731; font-size: 12px; cursor: pointer; }
 .video-control:focus-visible { outline: 2px solid #4b8ce5; outline-offset: 4px; }
@@ -48,3 +48,22 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
   .video-control { right: 12px; bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Opacity preserves the final line widths and the existing colored spans. */
+.typing-character { position: relative; opacity: 0; }
+.typing-character.is-visible { opacity: 1; }
+.typing-character.is-current::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  bottom: .05em;
+  width: max(1px, .025em);
+  height: 1em;
+  background: currentColor;
+  pointer-events: none;
+  animation: typing-caret 700ms steps(1, end) infinite;
+}
+@keyframes typing-caret { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .typing-character { opacity: 1; }
+  .typing-character.is-current::after { display: none; }
+}
