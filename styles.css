@@ -67,3 +67,72 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
   .typing-character { opacity: 1; }
   .typing-character.is-current::after { display: none; }
 }
+
+/* Figma pc: 1920px wide, section begins at y1080. Decoration stays separate
+   from the live text; mobile spacing grows with readable body copy. */
+.about-designer { position:relative; isolation:isolate; container-type:inline-size; overflow:hidden; color:#000; background:#fffdf8; min-height:134.53125vw; padding:24.63542% 0 21.8%; }
+.about-designer::before { content:""; position:absolute; z-index:-2; inset:0; background:url("./assets/about/paper.jpg") center bottom /100% auto no-repeat; }
+.about-art { position:absolute; inset:0; z-index:-1; pointer-events:none; mix-blend-mode:multiply; }
+.about-art img { position:absolute; display:block; height:auto; mix-blend-mode:multiply; }
+.about-art-pencils { left:0; top:8.54167cqw; width:33.95833%; }
+.about-art-yellow { left:9.94792%; top:51.97917cqw; width:15.9375%; }
+.about-art-eraser { right:0; top:110.57292cqw; width:13.95833%; }
+.about-art-red { left:79.79167%; top:50.10417cqw; width:20.20833%; }
+.about-art-blue-green { right:0; top:12.65625cqw; width:37.96875%; }
+.about-art-pink { left:0; bottom:0.78125cqw; width:24.89583%; }
+.about-art-circle { left:39.32292%; top:5.36458cqw; width:20.3125%; }
+.about-content { width:51.82292%; margin-inline:auto; }
+.about-heading { width:96.78392%; margin-inline:auto; text-align:center; }
+.about-eyebrow { margin:0 0 2.96875cqw; font-size:2.03125cqw; font-weight:500; line-height:1.20513; letter-spacing:.02em; }
+.about-heading h2 { margin:0; padding-bottom:1.09375cqw; border-bottom:2px solid #4789ed; font-size:3.64583cqw; font-weight:700; line-height:1.4; letter-spacing:-.02em; word-break:keep-all; }
+.about-principles { width:88%; margin:12.39583cqw auto 0; padding:0; list-style:none; }
+.about-principle + .about-principle { margin-top:3.85cqw; }
+.about-principle-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:.68cqw; border-bottom:1px solid #666; }
+.about-principle-heading > span { font-size:2.08333cqw; font-weight:700; line-height:1.2; }
+.about-principle-heading h3 { margin:0; font-size:1.35417cqw; font-weight:400; line-height:1.2; text-transform:uppercase; }
+.about-principle p { margin:1.04cqw 0 0; font-size:1.35417cqw; line-height:1.6; word-break:keep-all; overflow-wrap:anywhere; }
+.about-principle strong { font-weight:600; }
+@media (min-width:761px) and (max-width:1180px) {
+  .about-designer { padding-bottom:150px; }
+  .about-content { width:70%; max-width:760px; }
+  .about-eyebrow { font-size:24px; }
+  .about-heading h2 { font-size:clamp(30px,3.65cqw,43px); }
+  .about-principles { margin-top:90px; width:94%; }
+  .about-principle + .about-principle { margin-top:44px; }
+  .about-principle-heading { padding-bottom:12px; }
+  .about-principle-heading > span { font-size:28px; }
+  .about-principle-heading h3,.about-principle p { font-size:16px; }
+  .about-principle p { margin-top:16px; }
+  .about-art-eraser { top:auto; bottom:4%; }
+}
+@media (max-width:760px) {
+  .about-designer { min-height:0; padding:25.37313% 24px 110px; }
+  .about-designer::before { background-size:auto 100%; }
+  .about-content { width:100%; max-width:520px; }
+  .about-heading { width:100%; }
+  .about-eyebrow { margin-bottom:24px; font-size:16px; }
+  .about-heading h2 { padding-bottom:16px; font-size:clamp(20px,5.2cqw,32px); line-height:1.5; letter-spacing:-.03em; }
+  .about-principles { width:92%; margin-top:58px; }
+  .about-principle + .about-principle { margin-top:34px; }
+  .about-principle-heading { padding-bottom:9px; }
+  .about-principle-heading > span { font-size:24px; }
+  .about-principle-heading h3 { font-size:12px; }
+  .about-principle p { margin-top:12px; font-size:14px; line-height:1.75; }
+  .about-principle strong { font-weight:600; }
+  .about-art-pencils { left:0; top:10.04cqw; width:32.76%; }
+  .about-art-circle { left:39.87%; top:11.6cqw; width:19.54%; }
+  .about-art-blue-green { left:61.58%; right:auto; top:11.48cqw; width:38.42%; }
+  .about-art-yellow { left:5.97%; top:54.23cqw; width:17.82%; }
+  .about-art-red { left:81.17%; top:46%; width:19.44%; }
+  .about-art-pink { left:0; bottom:0; width:24%; }
+  .about-art-eraser { top:auto; bottom:9%; width:13.47%; }
+}
+
+
+
+/* Cursor image read from the Figma image preview (208px). */
+.about-heading { position: relative; }
+.about-cursor { position: absolute; left: 92%; top: 79%; width: 22.22%; height: auto; mix-blend-mode: multiply; pointer-events: none; }
+@media (max-width: 760px) {
+  .about-cursor { left: auto; right: -16px; top: auto; bottom: -30px; width: 52px; }
+}
