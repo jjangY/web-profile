@@ -1,29 +1,12 @@
 (() => {
   'use strict';
   const video = document.querySelector('.hero-video');
-  const control = document.querySelector('.video-control');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let resumeOnVisible = false;
-  function updateControl() {
-    const label = video.ended ? '다시 재생' : video.paused ? '재생' : '일시정지';
-    control.textContent = label;
-    control.setAttribute('aria-label', `배경 영상 ${label}`);
-    control.hidden = false;
-  }
   async function play() {
     video.muted = true;
-    try { await video.play(); } catch { updateControl(); }
+    try { await video.play(); } catch { /* Keep the poster frame when autoplay is unavailable. */ }
   }
-  control.addEventListener('click', () => {
-    if (video.paused || video.ended) {
-      if (video.ended) video.currentTime = 0;
-      play();
-    } else { video.pause(); }
-  });
-  for (const event of ['play', 'pause', 'ended', 'loadeddata']) {
-    video.addEventListener(event, updateControl);
-  }
-  video.addEventListener('error', () => { control.hidden = true; });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       resumeOnVisible = !video.paused;
@@ -106,4 +89,39 @@
   document.addEventListener('visibilitychange', onVisibility);
   preference.addEventListener('change', onPreference);
   if (!document.hidden) frame = requestAnimationFrame(tick);
+})();
+// Reveal each principle once when it enters the viewport.
+(() => {
+  'use strict';
+  const items = document.querySelectorAll('.about-principle');
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!items.length || preference.matches || !('IntersectionObserver' in window)) return;
+  const animations = new Set();
+  let remaining = items.length;
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      observer.unobserve(entry.target);
+      const animation = entry.target.animate([
+        { opacity: 0, transform: 'translateY(28px)' },
+        { opacity: 1, transform: 'translateY(0)' }
+      ], { duration: 750, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+      animations.add(animation);
+      animation.onfinish = () => {
+        animations.delete(animation);
+        if (remaining === 0 && animations.size === 0) preference.removeEventListener('change', onPreference);
+      };
+      remaining -= 1;
+    }
+    if (remaining === 0) observer.disconnect();
+  }, { threshold: 0.12 });
+  function onPreference() {
+    if (!preference.matches) return;
+    observer.disconnect();
+    animations.forEach(animation => animation.cancel());
+    animations.clear();
+    preference.removeEventListener('change', onPreference);
+  }
+  preference.addEventListener('change', onPreference);
+  items.forEach(item => observer.observe(item));
 })();

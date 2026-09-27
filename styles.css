@@ -23,11 +23,7 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
 .word-lasting { color: #000; }
 .phrase { color: #000; }
 /* .copy-rule { display: block; width: 5.94cqw; height: 1px; margin-top: 2.1cqw; background: #666; } */
-.signature { margin: 1.4cqw 0 0; color: #000; font-size: 1.3cqw; font-weight: 600; letter-spacing: .31em; line-height: 1.4; white-space: nowrap; }
-.video-control { position: absolute; bottom: 18px; right: 18px; min-width: 44px; min-height: 44px; padding: 8px 14px; border: 1px solid #27273155; border-radius: 24px; background: #fffdf6e6; color: #272731; font-size: 12px; cursor: pointer; }
-.video-control:focus-visible { outline: 2px solid #4b8ce5; outline-offset: 4px; }
-.video-control[hidden] { display: none; }
-@media (min-width: 761px) and (max-width: 1180px) {
+.signature { margin: 1.4cqw 0 0; color: #000; font-size: 1.3cqw; font-weight: 600; letter-spacing: .31em; line-height: 1.4; white-space: nowrap; }@media (min-width: 761px) and (max-width: 1180px) {
   .hero-menu { width: 42cqw; }
   .hero-menu span { font-size: 1.15cqw; }
 }
@@ -44,9 +40,7 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
   .signature { font-size: clamp(8px, 2.2cqw, 14px); letter-spacing: .24em; margin: 13px 0 0; }
   .hero-visual { top: 290px; }
   .hero-visual::after { content: ""; position: absolute; inset: 0 0 auto; height: 70px; background: linear-gradient(#fffdf6, transparent); pointer-events: none; }
-  .hero-video { object-position: 83% center; }
-  .video-control { right: 12px; bottom: 12px; }
-}
+  .hero-video { object-position: 83% center; }}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 /* Opacity preserves the final line widths and the existing colored spans. */
 .typing-character { position: relative; opacity: 0; }
@@ -134,5 +128,15 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
 .about-heading { position: relative; }
 .about-cursor { position: absolute; left: 92%; top: 79%; width: 22.22%; height: auto; mix-blend-mode: multiply; pointer-events: none; }
 @media (max-width: 760px) {
-  .about-cursor { left: auto; right: -16px; top: auto; bottom: -30px; width: 52px; }
+  .about-cursor {
+    left: auto;
+    right: -35px;
+    top: auto;
+    bottom: -35px;
+    width: 52px;
 }
+}
+
+/* Blend only the hero bottom into the next section; artwork stays uncovered. */
+.hero::after { content: ""; position: absolute; inset: auto 0 0; height: clamp(100px, 8.333vw, 160px); background: linear-gradient(to bottom, rgba(255,253,248,0), rgba(255,253,248,.4) 40%, #fffdf8 100%); pointer-events: none; }
+@media (max-width: 760px) { .hero::after { height: clamp(60px, 20vw, 100px); } }
