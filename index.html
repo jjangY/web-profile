@@ -7,7 +7,10 @@
   <title>Jang Ye Won — Web Designer</title>
   <link rel="preload" href="./fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./popup.css">
   <script src="./script.js" defer></script>
+  <script src="./popup-data.js" defer></script>
+  <script src="./popup-slider.js" defer></script>
 </head>
 <body>
   <main>
@@ -75,6 +78,84 @@
       </div>
     </section>
 
+    <section class="capabilities" id="skills" aria-labelledby="capabilities-title">
+      <img class="capabilities-paper" src="./assets/skills/paper.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <header class="capabilities-heading">
+        <p class="capabilities-eyebrow" lang="en">What I Can Do</p>
+        <div class="capabilities-intro">
+          <h2 id="capabilities-title">배우고, 만들고,<br>완성하는 힘</h2>
+          <div class="capabilities-description">
+            <p><strong>디자인의 기본기를 바탕으로 새로운 도구와 기술을 꾸준히 배우고 있습니다.</strong></p>
+            <p>아이디어를 시각화하는 것에서 그치지 않고, 실제 결과물로 완성해내는 과정을 중요하게 생각합니다.</p>
+          </div>
+        </div>
+      </header>
+      <div class="capabilities-body">
+        <div class="capabilities-photo" role="img" aria-label="프로필 사진을 넣을 공간"></div>
+        <div class="skills-panel" aria-labelledby="skills-title">
+          <h3 id="skills-title" lang="en">SKILLS &amp; TOOLS</h3>
+          <div class="skills-grid">
+            <article class="skill-item" aria-labelledby="skill-photoshop">
+              <div class="skill-icon"><img src="./assets/skills/photoshop.png" width="50" height="46" alt="" loading="lazy" decoding="async"></div>
+              <h4 id="skill-photoshop" lang="en">Photoshop</h4>
+              <ul><li>사진 보정</li><li>이미지 합성</li><li>색상 보정</li><li>상품 이미지 제작</li><li>웹용 그래픽 편집</li></ul>
+            </article>
+            <article class="skill-item" aria-labelledby="skill-illustrator">
+              <div class="skill-icon"><img src="./assets/skills/illustrator.png" width="50" height="46" alt="" loading="lazy" decoding="async"></div>
+              <h4 id="skill-illustrator" lang="en">Illustrator</h4>
+              <ul><li>로고, 아이콘,벡터 일러스트 작업</li><li>인쇄용 그래픽 작업</li></ul>
+            </article>
+            <article class="skill-item" aria-labelledby="skill-figma">
+              <div class="skill-icon"><img src="./assets/skills/figma.png" width="47" height="46" alt="" loading="lazy" decoding="async"></div>
+              <h4 id="skill-figma" lang="en">Figma</h4>
+              <ul><li>웹사이트 구조 설계</li><li>와이어프레임</li><li>UI 디자인</li><li>프로토타입, 컴포넌트 제작</li></ul>
+            </article>
+            <article class="skill-item skill-item-small-icon" aria-labelledby="skill-notion">
+              <div class="skill-icon"><img src="./assets/skills/notion.svg" alt="" loading="lazy" decoding="async"></div>
+              <h4 id="skill-notion" lang="en">Notion</h4>
+              <ul><li>업무 문서화</li><li>일정 공유</li><li>피드백 정리</li><li>협업 진행 상황 관리</li></ul>
+            </article>
+            <article class="skill-item skill-item-small-icon skill-item-ai" aria-labelledby="skill-ai">
+              <div class="skill-icon"><img src="./assets/skills/chatgpt.svg" alt="" loading="lazy" decoding="async"><img src="./assets/skills/gemini.png" width="38" height="38" alt="" loading="lazy" decoding="async"></div>
+              <h4 id="skill-ai">Generative AI 활용</h4>
+              <ul><li>ChatGPT: 생성형 AI 활용 및 프롬프트 작성 능력 습득</li><li>Gemini: 자료 분석과 AI 기반 정보 생성 활용</li></ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="graphic-works" id="works" aria-labelledby="works-title">
+      <div class="works-art" aria-hidden="true">
+        <img class="works-grid" src="./assets/works/background-grid-sec3.png" alt="" loading="lazy" decoding="async">
+        <img class="works-rainbow" src="./assets/works/rainbow.png" alt="" loading="lazy" decoding="async">
+        <img class="works-circle" src="./assets/works/blue-circle.png" alt="" loading="lazy" decoding="async">
+      </div>
+      <header class="works-heading">
+        <p class="works-eyebrow" lang="en">Graphic Works</p>
+        <h2 id="works-title">작은 한 장의 그래픽에도<br>목적을 담습니다.</h2>
+        <p class="works-summary">팝업, 포스터, 배너, 상세페이지 등 다양한 매체에 맞는 시각적 표현을 설계하고 제작했습니다.</p>
+      </header>
+      <div class="popup-intro">
+        <h3 id="popup-title" lang="en">Popup Designs</h3>
+        <p>짧은 시간 안에 사용자의 시선을 끌 수 있도록 제품을 중심으로 레이아웃을 구성하고,<br>브랜드의 분위기에 맞춰 그래픽 요소를 더했습니다.</p>
+      </div>
+      <div class="popup-gallery" role="region" aria-roledescription="캐러셀" aria-labelledby="popup-title">
+        <div class="popup-details" aria-live="off"></div>
+        <div class="popup-slider">
+          <div class="popup-viewport" tabindex="0" role="group" aria-label="팝업 작업물 이미지. 좌우 방향키로 이전·다음 작업물을 볼 수 있습니다.">
+            <div class="popup-track"></div>
+          </div>
+          <div class="popup-controls" hidden>
+            <button type="button" class="popup-prev" aria-label="이전 작업물">←</button>
+            <span class="popup-counter" aria-hidden="true">01 / 09</span>
+            <button type="button" class="popup-next" aria-label="다음 작업물">→</button>
+            <button type="button" class="popup-play" aria-pressed="true">일시정지</button>
+          </div>
+          <p class="popup-status visually-hidden" role="status" aria-live="polite"></p>
+        </div>
+        <noscript><p>작업물 슬라이드를 보려면 JavaScript를 활성화해 주세요.</p></noscript>
+      </div>
+    </section>
   </main>
 </body>
 </html>
