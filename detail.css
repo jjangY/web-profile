@@ -1,0 +1,54 @@
+/* Local Figma background-grid 4 (sec4-3): 1920 × 2393, y11414. */
+.detail-section { position:relative; isolation:isolate; overflow:hidden; background:#fffdf9; color:#000; padding:32.8125vw 0 13.4375vw; }
+.detail-art { position:absolute; inset:0; pointer-events:none; z-index:-1; }
+.detail-art img { position:absolute; display:block; }
+.detail-grid { left:0; top:-14.375vw; width:100%; height:140.833333vw; }
+.detail-cloud { mix-blend-mode:multiply; object-fit:cover; }
+.detail-cloud-large { left:35.78125%; top:3.072917vw; width:87.96875%; aspect-ratio:1689 / 1142; }
+.detail-cloud-small { left:-9.479167%; top:42.760417vw; width:45.260417%; aspect-ratio:869 / 588; }
+.detail-star-violet { left:21.927083%; top:12.447917vw; width:10.989583%; aspect-ratio:211 / 233; mix-blend-mode:multiply; }
+.detail-star-yellow { position:absolute; left:10.496%; top:28.697917vw; width:7.083333%; aspect-ratio:136 / 150; transform:rotate(.22313deg); transform-origin:1.470588% 3.333333%; }
+.detail-star-yellow img { position:static; width:136px; height:150px; }
+.detail-star-yellow { background:url("./assets/detail/star-yellow.svg") center / contain no-repeat; }
+.detail-circle { left:82.291667%; bottom:1.71875vw; width:9.166667%; aspect-ratio:176 / 167; opacity:.3; mix-blend-mode:multiply; }
+.detail-heading { text-align:center; width:90%; margin:0 auto; }
+.detail-heading h2 { margin:0; font-size:4.166667vw; font-weight:700; line-height:1.4; letter-spacing:.02em; }
+.detail-heading p { margin:1.041667vw 0 0; font-size:1.5625vw; line-height:1.4; letter-spacing:.02em; word-break:keep-all; }
+.detail-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4.270833vw; width:83.541667%; margin:9.635417vw auto 0; padding:0; list-style:none; }
+.detail-card { min-width:0; }
+.detail-preview { display:block; position:relative; color:inherit; text-decoration:none; border-radius:16px; overflow:hidden; background:#eee; }
+.detail-preview::after { content:""; position:absolute; inset:0; border:1px solid #dedede; border-radius:inherit; pointer-events:none; }
+.detail-thumbnail { width:100%; aspect-ratio:480 / 922; overflow:hidden; }
+.detail-thumbnail img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; transition:transform 350ms ease; }
+.detail-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; background:linear-gradient(145deg,#e9eef7,#fff8f1); color:#626778; }
+.detail-placeholder span { font-size:clamp(48px,5vw,96px); }
+.detail-placeholder small { font-size:clamp(10px,.8vw,15px); letter-spacing:.18em; }
+.detail-cta { position:absolute; bottom:18px; left:50%; transform:translateX(-50%); white-space:nowrap; padding:12px 20px; border-radius:999px; color:#fff; background:#272731e8; font-size:clamp(12px,.85vw,16px); }
+.detail-preview:not(a) .detail-cta { color:#555; background:#fffef3ed; }
+a.detail-preview:hover .detail-thumbnail img { transform:scale(1.025); }
+a.detail-preview:focus-visible { outline:3px solid #397eae; outline-offset:5px; }
+.detail-card h3 { margin:4.479167vw 0 0; text-align:center; font-size:1.458333vw; line-height:1.4; letter-spacing:.02em; word-break:keep-all; overflow-wrap:anywhere; }
+.detail-description { margin:1.666667vw 0 0; font-size:.9375vw; line-height:1.5; letter-spacing:.02em; word-break:keep-all; overflow-wrap:anywhere; white-space:pre-line; }
+@media (min-width:761px) and (max-width:1180px) {
+ .detail-heading p { font-size:18px; }
+ .detail-list { width:90%; gap:24px; }
+ .detail-card h3 { font-size:22px; }
+ .detail-description { font-size:15px; line-height:1.7; }
+}
+@media (max-width:760px) {
+ .detail-section { padding:170px 0 110px; }
+ .detail-grid { top:0; height:100%; object-fit:cover; }
+ .detail-cloud-large { left:20%; top:0; width:130%; }
+ .detail-cloud-small { left:-38%; top:420px; width:100%; }
+ .detail-star-violet { left:12%; top:65px; width:17%; }
+ .detail-star-yellow { left:7%; top:135px; width:11%; }
+ .detail-circle { width:20%; left:73%; bottom:20px; }
+ .detail-heading { width:calc(100% - 48px); }
+ .detail-heading h2 { font-size:clamp(30px,8vw,44px); }
+ .detail-heading p { margin-top:16px; font-size:15px; line-height:1.8; }
+ .detail-list { grid-template-columns:1fr; width:calc(100% - 48px); max-width:480px; gap:64px; margin-top:48px; }
+ .detail-card h3 { margin-top:24px; text-align:left; font-size:23px; }
+ .detail-description { margin-top:16px; font-size:15px; line-height:1.8; }
+ .detail-cta { font-size:14px; }
+}
+@media (prefers-reduced-motion:reduce) { .detail-thumbnail img { transition:none; } }

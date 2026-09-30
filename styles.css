@@ -23,7 +23,8 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
 .word-lasting { color: #000; }
 .phrase { color: #000; }
 /* .copy-rule { display: block; width: 5.94cqw; height: 1px; margin-top: 2.1cqw; background: #666; } */
-.signature { margin: 1.4cqw 0 0; color: #000; font-size: 1.3cqw; font-weight: 600; letter-spacing: .31em; line-height: 1.4; white-space: nowrap; }@media (min-width: 761px) and (max-width: 1180px) {
+.signature { margin: 1.4cqw 0 0; color: #000; font-size: 1.3cqw; font-weight: 600; letter-spacing: .31em; line-height: 1.4; white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1180px) {
   .hero-menu { width: 42cqw; }
   .hero-menu span { font-size: 1.15cqw; }
 }
@@ -40,7 +41,8 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
   .signature { font-size: clamp(8px, 2.2cqw, 14px); letter-spacing: .24em; margin: 13px 0 0; }
   .hero-visual { top: 290px; }
   .hero-visual::after { content: ""; position: absolute; inset: 0 0 auto; height: 70px; background: linear-gradient(#fffdf6, transparent); pointer-events: none; }
-  .hero-video { object-position: 83% center; }}
+  .hero-video { object-position: 83% center; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 /* Opacity preserves the final line widths and the existing colored spans. */
 .typing-character { position: relative; opacity: 0; }
@@ -152,7 +154,8 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
 .capabilities-description p { margin:0; }
 .capabilities-description strong { font-weight:700; }
 .capabilities-body { width:86.041667cqw; margin:0 0 7.552083cqw 9.270833cqw; display:grid; grid-template-columns:30.084746% 67.978208%; gap:1.937046%; align-items:start; }
-.capabilities-photo { width:100%; aspect-ratio:497 / 777; border-radius:2.395833cqw; background:#d9d9d9; }
+.capabilities-photo { display: block;
+object-fit: cover; width:100%; aspect-ratio:497 / 777; border-radius:2.395833cqw; background:#d9d9d9; }
 .skills-panel { padding:3.802083cqw 4.114583cqw 4.414583cqw; min-width:0; border-radius:1.666667cqw; background:rgb(255 255 255 / 76%); backdrop-filter:blur(6px); }
 .skills-panel h3 { margin:0 0 2.96875cqw; font-size:4.166667cqw; font-weight:700; line-height:1.4; letter-spacing:.02em; white-space:nowrap; }
 .skills-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:2.916667cqw; row-gap:5cqw; align-items:start; }

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +12,23 @@
   <script src="./script.js" defer></script>
   <script src="./popup-data.js" defer></script>
   <script src="./popup-slider.js" defer></script>
+  <link rel="stylesheet" href="./poster.css">
+  <script src="./poster-data.js" defer></script>
+  <script src="./poster.js" defer></script>
+  <link rel="stylesheet" href="./banner.css">
+  <script src="./banner-data.js" defer></script>
+  <script src="./banner.js" defer></script>
+  <link rel="stylesheet" href="./detail.css">
+  <script src="./detail-data.js" defer></script>
+  <script src="./detail.js" defer></script>
 </head>
+
 <body>
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-visual" aria-hidden="true">
-        <video class="hero-video" src="./assets/hero-2.mp4" muted playsinline preload="auto" tabindex="-1" disablepictureinpicture></video>
+        <video class="hero-video" src="./assets/hero-2.mp4" muted playsinline preload="auto" tabindex="-1"
+          disablepictureinpicture></video>
       </div>
       <header class="hero-header">
         <!-- Section destinations will be connected as each section is built. -->
@@ -32,11 +44,13 @@
       <div class="hero-copy" lang="en">
         <h1 id="hero-title">
           <span class="hero-line"><span class="word-slowly">Slowly.</span> like a drawing.</span>
-          <span class="hero-line"><span class="word-lasting">Lasting.</span> <span class="phrase">like an experience.</span></span>
+          <span class="hero-line"><span class="word-lasting">Lasting.</span> <span class="phrase">like an
+              experience.</span></span>
         </h1>
         <span class="copy-rule" aria-hidden="true"></span>
         <p class="signature">JANG YE WON <span>/</span> WEB DESIGNER</p>
-      </div>    </section>
+      </div>
+    </section>
     <section class="about-designer" id="about" aria-labelledby="about-title">
       <div class="about-art" aria-hidden="true">
         <img class="about-art-pencils" src="./assets/about/pencils.png" alt="" decoding="async">
@@ -49,29 +63,40 @@
       </div>
       <div class="about-content">
         <header class="about-heading">
-          <img class="about-cursor" src="./assets/about/cursor.png" alt="" aria-hidden="true" width="208" height="208" decoding="async">
+          <img class="about-cursor" src="./assets/about/cursor.png" alt="" aria-hidden="true" width="208" height="208"
+            decoding="async">
           <p class="about-eyebrow" lang="en">About Designer</p>
           <h2 id="about-title">당신의 이야기가<br>오래 머물 수 있도록 디자인합니다.</h2>
         </header>
         <ol class="about-principles">
           <li class="about-principle">
-            <div class="about-principle-heading"><span aria-hidden="true">01.</span><h3 lang="en">Detail</h3></div>
+            <div class="about-principle-heading"><span aria-hidden="true">01.</span>
+              <h3 lang="en">Detail</h3>
+            </div>
             <p><strong>천천히 관찰하고, 오래 남는 디자인을 만듭니다.</strong><br>작은 디테일까지 세심하게 살피며, 사용자에게 따뜻한 경험을 전달합니다.</p>
           </li>
           <li class="about-principle">
-            <div class="about-principle-heading"><span aria-hidden="true">02.</span><h3 lang="en">Balance</h3></div>
+            <div class="about-principle-heading"><span aria-hidden="true">02.</span>
+              <h3 lang="en">Balance</h3>
+            </div>
             <p><strong>기본에 충실한 디자인이 가장 오래 기억된다고 믿습니다.</strong><br>균형과 여백, 타이포그래피를 바탕으로 변하지 않는 디자인의 가치를 담아냅니다.</p>
           </li>
           <li class="about-principle">
-            <div class="about-principle-heading"><span aria-hidden="true">03.</span><h3 lang="en">Usability</h3></div>
+            <div class="about-principle-heading"><span aria-hidden="true">03.</span>
+              <h3 lang="en">Usability</h3>
+            </div>
             <p><strong>좋은 디자인은 보기 좋은 것에서 끝나지 않습니다.</strong><br>쉽게 이해되고 편리하게 사용될 때, 비로소 진정한 가치가 생깁니다.</p>
           </li>
           <li class="about-principle">
-            <div class="about-principle-heading"><span aria-hidden="true">04.</span><h3 lang="en">Connection</h3></div>
+            <div class="about-principle-heading"><span aria-hidden="true">04.</span>
+              <h3 lang="en">Connection</h3>
+            </div>
             <p><strong>디자인은 사람과 사람을 연결하는 언어라고 생각합니다.</strong><br>브랜드의 이야기를 자연스럽게 정리하고, 진심이 느껴지는 모습으로 표현합니다.</p>
           </li>
           <li class="about-principle">
-            <div class="about-principle-heading"><span aria-hidden="true">05.</span><h3 lang="en">Process</h3></div>
+            <div class="about-principle-heading"><span aria-hidden="true">05.</span>
+              <h3 lang="en">Process</h3>
+            </div>
             <p><strong>작은 아이디어도 정성스럽게 다듬으면 특별해집니다.</strong><br>관찰하고 고민하는 과정을 반복하며, 목적에 맞는 디자인으로 완성합니다.</p>
           </li>
         </ol>
@@ -79,7 +104,8 @@
     </section>
 
     <section class="capabilities" id="skills" aria-labelledby="capabilities-title">
-      <img class="capabilities-paper" src="./assets/skills/paper.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="capabilities-paper" src="./assets/skills/paper.png" alt="" aria-hidden="true" loading="lazy"
+        decoding="async">
       <header class="capabilities-heading">
         <p class="capabilities-eyebrow" lang="en">What I Can Do</p>
         <div class="capabilities-intro">
@@ -91,34 +117,61 @@
         </div>
       </header>
       <div class="capabilities-body">
-        <div class="capabilities-photo" role="img" aria-label="프로필 사진을 넣을 공간"></div>
+        <img class="capabilities-photo" src="./assets/skills/jyw-thinking.jpg" alt="장예원 프로필 사진">
         <div class="skills-panel" aria-labelledby="skills-title">
           <h3 id="skills-title" lang="en">SKILLS &amp; TOOLS</h3>
           <div class="skills-grid">
             <article class="skill-item" aria-labelledby="skill-photoshop">
-              <div class="skill-icon"><img src="./assets/skills/photoshop.png" width="50" height="46" alt="" loading="lazy" decoding="async"></div>
+              <div class="skill-icon"><img src="./assets/skills/photoshop.png" width="50" height="46" alt=""
+                  loading="lazy" decoding="async"></div>
               <h4 id="skill-photoshop" lang="en">Photoshop</h4>
-              <ul><li>사진 보정</li><li>이미지 합성</li><li>색상 보정</li><li>상품 이미지 제작</li><li>웹용 그래픽 편집</li></ul>
+              <ul>
+                <li>사진 보정</li>
+                <li>이미지 합성</li>
+                <li>색상 보정</li>
+                <li>상품 이미지 제작</li>
+                <li>웹용 그래픽 편집</li>
+              </ul>
             </article>
             <article class="skill-item" aria-labelledby="skill-illustrator">
-              <div class="skill-icon"><img src="./assets/skills/illustrator.png" width="50" height="46" alt="" loading="lazy" decoding="async"></div>
+              <div class="skill-icon"><img src="./assets/skills/illustrator.png" width="50" height="46" alt=""
+                  loading="lazy" decoding="async"></div>
               <h4 id="skill-illustrator" lang="en">Illustrator</h4>
-              <ul><li>로고, 아이콘,벡터 일러스트 작업</li><li>인쇄용 그래픽 작업</li></ul>
+              <ul>
+                <li>로고, 아이콘,벡터 일러스트 작업</li>
+                <li>인쇄용 그래픽 작업</li>
+              </ul>
             </article>
             <article class="skill-item" aria-labelledby="skill-figma">
-              <div class="skill-icon"><img src="./assets/skills/figma.png" width="47" height="46" alt="" loading="lazy" decoding="async"></div>
+              <div class="skill-icon"><img src="./assets/skills/figma.png" width="47" height="46" alt="" loading="lazy"
+                  decoding="async"></div>
               <h4 id="skill-figma" lang="en">Figma</h4>
-              <ul><li>웹사이트 구조 설계</li><li>와이어프레임</li><li>UI 디자인</li><li>프로토타입, 컴포넌트 제작</li></ul>
+              <ul>
+                <li>웹사이트 구조 설계</li>
+                <li>와이어프레임</li>
+                <li>UI 디자인</li>
+                <li>프로토타입, 컴포넌트 제작</li>
+              </ul>
             </article>
             <article class="skill-item skill-item-small-icon" aria-labelledby="skill-notion">
-              <div class="skill-icon"><img src="./assets/skills/notion.svg" alt="" loading="lazy" decoding="async"></div>
+              <div class="skill-icon"><img src="./assets/skills/notion.svg" alt="" loading="lazy" decoding="async">
+              </div>
               <h4 id="skill-notion" lang="en">Notion</h4>
-              <ul><li>업무 문서화</li><li>일정 공유</li><li>피드백 정리</li><li>협업 진행 상황 관리</li></ul>
+              <ul>
+                <li>업무 문서화</li>
+                <li>일정 공유</li>
+                <li>피드백 정리</li>
+                <li>협업 진행 상황 관리</li>
+              </ul>
             </article>
             <article class="skill-item skill-item-small-icon skill-item-ai" aria-labelledby="skill-ai">
-              <div class="skill-icon"><img src="./assets/skills/chatgpt.svg" alt="" loading="lazy" decoding="async"><img src="./assets/skills/gemini.png" width="38" height="38" alt="" loading="lazy" decoding="async"></div>
+              <div class="skill-icon"><img src="./assets/skills/chatgpt.svg" alt="" loading="lazy" decoding="async"><img
+                  src="./assets/skills/gemini.png" width="38" height="38" alt="" loading="lazy" decoding="async"></div>
               <h4 id="skill-ai">Generative AI 활용</h4>
-              <ul><li>ChatGPT: 생성형 AI 활용 및 프롬프트 작성 능력 습득</li><li>Gemini: 자료 분석과 AI 기반 정보 생성 활용</li></ul>
+              <ul>
+                <li>ChatGPT: 생성형 AI 활용 및 프롬프트 작성 능력 습득</li>
+                <li>Gemini: 자료 분석과 AI 기반 정보 생성 활용</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -153,9 +206,69 @@
           </div>
           <p class="popup-status visually-hidden" role="status" aria-live="polite"></p>
         </div>
-        <noscript><p>작업물 슬라이드를 보려면 JavaScript를 활성화해 주세요.</p></noscript>
+        <noscript>
+          <p>작업물 슬라이드를 보려면 JavaScript를 활성화해 주세요.</p>
+        </noscript>
       </div>
     </section>
+    <section class="poster-section" id="posters" aria-labelledby="poster-title">
+      <div class="poster-background" aria-hidden="true">
+        <div class="poster-stage">
+          <img class="poster-grid" src="./assets/poster/background-grid-sec4-1.png" alt="" loading="lazy"
+            decoding="async">
+          <img class="poster-rainbow" src="./assets/poster/rainbow-circle.png" alt="" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="poster-layout">
+        <header class="poster-heading">
+          <h2 id="poster-title" lang="en">Poster Designs</h2>
+          <p>콘텐츠의 핵심 이미지를 중심으로 시각적 강약을 조절하고,<br>메시지가 명확하게 전달되도록 디자인했습니다.</p>
+        </header>
+        <ol class="poster-list" aria-label="포스터 작업물 6개"></ol>
+        <noscript>
+          <p class="poster-empty">포스터 작업물을 보려면 JavaScript를 활성화해 주세요.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="banner-section" id="banners" aria-labelledby="banner-title">
+      <div class="banner-art" aria-hidden="true">
+        <img class="banner-grid" src="./assets/banner/background-grid-sec4-2.jpg" alt="" loading="lazy" decoding="async">
+        <div class="banner-note"><img src="./assets/banner/yellow-box.jpg" alt="" loading="lazy" decoding="async"></div>
+      </div>
+      <header class="banner-heading">
+        <h2 id="banner-title" lang="en">Banner Designs</h2>
+        <p>브랜드의 분위기에 맞는 컬러와 이미지를 활용해 시선을 집중시켰습니다.</p>
+      </header>
+      <div class="banner-gallery" role="region" aria-roledescription="캐러셀" aria-labelledby="banner-title">
+        <div class="banner-viewport"></div>
+        <div class="banner-controls" hidden>
+          <div class="banner-dots" role="group" aria-label="배너 선택"></div>
+          <button class="banner-play" type="button" aria-pressed="true">일시정지</button>
+        </div>
+        <p class="banner-status visually-hidden" role="status" aria-live="polite"></p>
+        <noscript><p>배너 작업물을 보려면 JavaScript를 활성화해 주세요.</p></noscript>
+      </div>
+    </section>
+
+    <section class="detail-section" id="details" aria-labelledby="detail-title">
+      <div class="detail-art" aria-hidden="true">
+        <img class="detail-grid" src="./assets/detail/background-grid-sec4-3.jpg" alt="" loading="lazy" decoding="async">
+        <img class="detail-cloud detail-cloud-large" src="./assets/detail/rainbow-cloud.jpg" alt="" loading="lazy" decoding="async">
+        <img class="detail-cloud detail-cloud-small" src="./assets/detail/rainbow-cloud.jpg" alt="" loading="lazy" decoding="async">
+        <img class="detail-star-violet" src="./assets/detail/star-violet.jpg" alt="" loading="lazy" decoding="async">
+        <span class="detail-star-yellow"></span>
+        <img class="detail-circle" src="./assets/detail/circle-red.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+      <header class="detail-heading">
+        <h2 id="detail-title" lang="en">Detail Designs</h2>
+        <p>브랜드의 분위기를 유지하면서 제품 정보가 명확하게 전달되도록 디자인했습니다.</p>
+      </header>
+      <ol class="detail-list" aria-label="상세페이지 디자인 작품"></ol>
+      <noscript><p>작업물 목록을 보려면 JavaScript를 활성화해 주세요.</p></noscript>
+    </section>
+
   </main>
 </body>
+
 </html>

@@ -1,0 +1,45 @@
+/* Figma: background 1920 × 1722; heading x1122/y328; first work x85/y534.
+   Section itself must not use overflow:hidden: it would break sticky positioning. */
+.poster-section { position:relative; isolation:isolate; color:#000; background:#fffdf9; }
+.poster-background { position:absolute; inset:0; z-index:-1; pointer-events:none; }
+.poster-stage { position:sticky; top:0; height:100vh; height:100svh; overflow:hidden; }
+.poster-grid { position:absolute; left:0; top:-14.377vw; width:100%; height:140.836vw; }
+.poster-rainbow { position:absolute; left:46.302083%; top:50%; width:min(89.010417%, 90svh); height:auto; aspect-ratio:1; object-fit:contain; transform:translateY(-50%); mix-blend-mode:multiply; }
+.poster-scratch { position:absolute; left:-4.322917%; top:8.64545vw; width:26.979167%; aspect-ratio:518 / 305; object-fit:cover; transform:rotate(-15.679507deg); transform-origin:top left; mix-blend-mode:multiply; }
+.poster-layout { display:grid; grid-template-columns:minmax(0,935fr) minmax(0,702fr); gap:5.3125vw; padding:17.083333vw 5% 45vh 4.427083%; align-items:start; }
+.poster-heading { grid-column:2; grid-row:1; position:sticky; top:clamp(32px,17.083333vw,32vh); text-align:right; }
+.poster-heading h2 { margin:0; font-size:4.166667vw; font-weight:700; line-height:1.4; letter-spacing:.02em; }
+.poster-heading p { margin:1.041667vw 0 0; font-size:1.5625vw; line-height:1.4; letter-spacing:.02em; word-break:keep-all; }
+.poster-list { grid-column:1; grid-row:1; display:grid; gap:clamp(100px,13vw,250px); margin:0; padding:10.729167vw 0 0; list-style:none; min-width:0; }
+.poster-item { display:grid; grid-template-columns:minmax(0,500fr) minmax(0,370fr); gap:3.385417vw; align-items:center; }
+.poster-image { margin:0; min-width:0; }
+.poster-image img { display:block; width:100%; height:auto; }
+.poster-placeholder { aspect-ratio:2 / 3; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:20px; color:#686373; background:linear-gradient(145deg,#eee9f3,#fff9ee); border:1px solid #0000000d; }
+.poster-placeholder span { font-size:clamp(48px,5vw,96px); font-weight:500; }
+.poster-placeholder small { font-size:clamp(10px,.7vw,14px); letter-spacing:.18em; }
+.poster-copy { min-width:0; }
+.poster-copy h3 { margin:0 0 24px; font-size:clamp(22px,1.75vw,34px); line-height:1.4; word-break:keep-all; overflow-wrap:anywhere; }
+.poster-copy p { margin:0; font-size:clamp(15px,1.05vw,21px); line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; white-space:pre-line; }
+.poster-empty { padding:24px; }
+@media (min-width:761px) and (max-width:1180px) {
+ .poster-layout { grid-template-columns:minmax(0,1.65fr) minmax(0,1fr); gap:4vw; padding-inline:4%; }
+ .poster-item { gap:20px; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); }
+ .poster-heading h2 { font-size:clamp(30px,4vw,48px); }
+ .poster-heading p { font-size:17px; line-height:1.7; }
+ .poster-heading br { display:none; }
+ .poster-copy h3 { font-size:22px; }
+}
+@media (max-width:760px) {
+ .poster-layout { display:flex; flex-direction:column; gap:48px; padding:80px 24px 96px; }
+ .poster-heading { position:static; text-align:left; }
+ .poster-heading h2 { font-size:clamp(30px,8vw,44px); }
+ .poster-heading p { margin-top:16px; font-size:15px; line-height:1.8; }
+ .poster-heading br { display:none; }
+ .poster-list { width:100%; padding:0; gap:72px; }
+ .poster-item { grid-template-columns:1fr; gap:24px; }
+ .poster-copy h3 { font-size:24px; margin-bottom:16px; }
+ .poster-copy p { font-size:15px; }
+ .poster-grid { top:0; width:100%; height:100%; object-fit:cover; }
+ .poster-rainbow { left:28%; width:min(140%, 90svh); }
+ .poster-scratch { top:32px; width:55%; }
+}
