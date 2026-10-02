@@ -52,3 +52,21 @@ a.detail-preview:focus-visible { outline:3px solid #397eae; outline-offset:5px; 
  .detail-cta { font-size:14px; }
 }
 @media (prefers-reduced-motion:reduce) { .detail-thumbnail img { transition:none; } }
+
+/* Full-size artwork viewer: downloads only the selected image. */
+.detail-dialog { width:100%; max-width:none; height:100vh; height:100dvh; max-height:none; margin:0; padding:24px 16px; border:0; background:transparent; color:#272731; overflow:auto; overscroll-behavior:contain; }
+.detail-dialog::backdrop { background:rgb(0 0 0 / 75%); }
+.detail-dialog-shell { width:100%; max-width:860px; margin:0 auto; background:#fff; border-radius:12px; }
+.detail-dialog-toolbar { position:sticky; top:0; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 16px; background:#fffffff5; border-bottom:1px solid #dedede; border-radius:12px 12px 0 0; }
+.detail-dialog-toolbar h2 { margin:0; font-size:16px; line-height:1.4; overflow-wrap:anywhere; }
+.detail-dialog-close { flex:none; min-height:44px; padding:8px 16px; border:1px solid #ccc; border-radius:24px; background:#fff; color:#222; cursor:pointer; }
+.detail-dialog-close:focus-visible { outline:3px solid #397eae; outline-offset:2px; }
+.detail-full-image { display:block; width:100%; height:auto; }
+.detail-full-image[hidden] { display:none; }
+.detail-dialog-message { margin:0; padding:48px 24px; text-align:center; line-height:1.6; }
+@media (max-width:760px) {
+ .detail-dialog { padding:0; }
+ .detail-dialog-shell,.detail-dialog-toolbar { border-radius:0; }
+ .detail-dialog-toolbar { padding:8px 12px; gap:12px; }
+ .detail-dialog-toolbar h2 { font-size:14px; }
+}

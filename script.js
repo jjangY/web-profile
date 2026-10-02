@@ -126,10 +126,10 @@
   items.forEach(item => observer.observe(item));
 })();
 
-// Reveal the Skills eyebrow and title from above, once per page visit.
+// Reveal the Skills, project, and Graphic Works headings from above, once per page visit.
 (() => {
   'use strict';
-  const items = document.querySelectorAll('.capabilities-eyebrow, #capabilities-title');
+  const items = document.querySelectorAll('.capabilities-eyebrow, #capabilities-title, #geulgil-title, .project-about h4, .works-eyebrow, #works-title');
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (!items.length || preference.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
   const animations = new Map();
