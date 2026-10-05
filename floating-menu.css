@@ -21,7 +21,7 @@
 .hero-menu a:hover,.hero-menu a.is-selected { color:#938269; }
 .back-to-top { position:absolute; right:14px; bottom:60px; display:flex; align-items:center; justify-content:center; width:48px; height:48px; border:1px solid #938269; border-radius:50%; background:#fff; color:#000; box-shadow:0 4px 18px #00000012; transition:color .18s ease; }
 .back-to-top[hidden] { display:none; }
-.back-to-top span { width:26px; height:26px; background:currentColor; mask:url('./assets/navigation/akar-icons_arrow-up.svg') center / contain no-repeat; }
+.back-to-top svg { display:block; width:26px; height:26px; flex-shrink:0; }
 .back-to-top:hover,.back-to-top:active,.back-to-top:focus-visible { color:#938269; }
 @media (max-width:760px) { .back-to-top { right:10px; bottom:56px; width:44px; height:44px; } }
 @media (prefers-reduced-motion:reduce) { .back-to-top { transition:none; } }

@@ -44,6 +44,15 @@
     });
   }
   function scheduleUpdate() { if (!frame) frame = requestAnimationFrame(update); }
+  toggle.addEventListener('pointerenter', event => {
+    if (event.pointerType !== 'mouse' || open) return;
+    setOpen(true);
+  });
+  menu.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'mouse' && open) {
+      setOpen(false);
+    }
+  });
   toggle.addEventListener('click', () => setOpen(!open));
   links.forEach((link, index) => link.addEventListener('click', () => {
     setOpen(false);
