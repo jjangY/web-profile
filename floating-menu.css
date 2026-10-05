@@ -1,0 +1,27 @@
+.floating-menu { position:fixed; right:max(24px,env(safe-area-inset-right)); bottom:max(24px,env(safe-area-inset-bottom)); z-index:1000; display:flex; align-items:flex-end; gap:12px; }
+.floating-menu[hidden] { display:none; }
+.floating-menu-toggle { width:76px; height:48px; flex-shrink:0; padding:0; border:1px solid #938269; border-radius:14px; background:#fff; color:#000; font:700 14px/1 Pretendard,sans-serif; letter-spacing:.06em; cursor:pointer; box-shadow:0 4px 18px #00000012; }
+.floating-menu-toggle[aria-expanded="true"] { font-size:20px; }
+.floating-menu-panel { width:260px; max-width:calc(100vw - 124px); max-height:calc(100dvh - 48px); overflow-y:auto; padding:14px; border:1px solid #eee8de; border-radius:18px; background:#fff; box-shadow:0 8px 32px #00000014; opacity:0; visibility:hidden; transform:translateX(8px); transition:opacity .22s ease,transform .22s ease,visibility 0s linear .22s; }
+.floating-menu.is-open .floating-menu-panel { opacity:1; visibility:visible; transform:translateX(0); transition-delay:0s; }
+.floating-menu-panel ul { list-style:none; padding:0; margin:0; }
+.floating-menu-panel a { display:block; padding:10px 12px; border-radius:8px; color:#000; font-size:15px; font-weight:700; line-height:1.4; text-decoration:none; transition:color .15s ease; }
+.floating-menu-panel a:hover,.floating-menu-panel a[aria-current="location"] { color:#938269; }
+.floating-menu a:focus-visible,.floating-menu-toggle:focus-visible { outline:2px solid #938269; outline-offset:3px; }
+@media (max-width:760px) {
+ .floating-menu { right:max(12px,env(safe-area-inset-right)); bottom:max(12px,env(safe-area-inset-bottom)); gap:8px; }
+ .floating-menu-toggle { width:64px; height:44px; font-size:12px; border-radius:12px; }
+ .floating-menu-panel { width:250px; max-width:calc(100vw - 96px); max-height:calc(100dvh - 24px); padding:10px; border-radius:14px; }
+ .floating-menu-panel a { padding:10px 8px; font-size:14px; }
+}
+@media (prefers-reduced-motion:reduce) { .floating-menu-panel,.floating-menu-panel a { transition:none; } }
+
+/* Heading destinations and final-section back-to-top control. */
+#about-navigation-title,#works-navigation-title,#skills-title,#popup-title,#banner-title,#detail-title,#project-title { scroll-margin-top:24px; }
+.hero-menu a:hover,.hero-menu a.is-selected { color:#938269; }
+.back-to-top { position:absolute; right:14px; bottom:60px; display:flex; align-items:center; justify-content:center; width:48px; height:48px; border:1px solid #938269; border-radius:50%; background:#fff; color:#000; box-shadow:0 4px 18px #00000012; transition:color .18s ease; }
+.back-to-top[hidden] { display:none; }
+.back-to-top span { width:26px; height:26px; background:currentColor; mask:url('./assets/navigation/akar-icons_arrow-up.svg') center / contain no-repeat; }
+.back-to-top:hover,.back-to-top:active,.back-to-top:focus-visible { color:#938269; }
+@media (max-width:760px) { .back-to-top { right:10px; bottom:56px; width:44px; height:44px; } }
+@media (prefers-reduced-motion:reduce) { .back-to-top { transition:none; } }

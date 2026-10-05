@@ -1,0 +1,28 @@
+.sumn-typography { position:relative; isolation:isolate; overflow:hidden; background:#fffdf9; color:#000; padding:.833333vw 0 7.03125vw; }
+.sumn-type-art { position:absolute; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
+.sumn-type-grid { position:absolute; top:-3.546185vw; left:0; width:100%; height:140.833333vw; }
+.sumn-type-ring { position:absolute; left:62.083333%; top:17.864583vw; width:71.40625%; mix-blend-mode:multiply; }
+.sumn-type-yellow { position:absolute; left:-5.416667%; top:12.083333vw; width:10.989583%; opacity:.6; mix-blend-mode:multiply; }
+.sumn-phone { position:relative; overflow:hidden; width:44.53125%; height:43.333333vw; margin:0 0 0 10.260417%; border:1px solid #9d7762; border-radius:clamp(8px,1.5625vw,30px); }
+.sumn-phone img { display:block; position:absolute; width:150.0518%; height:115.5934%; left:-27.201% ; top:-9.632783%; max-width:none; }
+.sumn-type-copy { width:68.125%; margin:11.354167vw auto 0; text-align:center; letter-spacing:.02em; }
+.sumn-type-copy h2 { margin:0; font-size:3.125vw; font-weight:700; line-height:1.4; }
+.sumn-type-copy p { margin:1.041667vw 0 0; font-size:1.5625vw; font-weight:400; line-height:1.4; word-break:keep-all; }
+.sumn-type-sizes { display:flex; flex-direction:column; gap:3.645833vw; width:max-content; margin:7.135417vw auto 0; padding:0; list-style:none; font-size:2.000716vw; line-height:1.2; }
+.sumn-type-sizes li { display:flex; justify-content:center; align-items:baseline; gap:.898783vw; }
+.sumn-type-sizes strong { font-weight:700; }
+.sumn-type-sizes span { font-weight:400; }
+@media (min-width:761px) and (max-width:1180px) { .sumn-type-copy { width:85%; } .sumn-type-copy p { font-size:18px; } }
+@media (max-width:760px) {
+ .sumn-typography { padding:40px 0 80px; }
+ .sumn-type-grid { top:0; height:100%; object-fit:cover; }
+ .sumn-phone { width:84%; height:81.740351vw; margin:0 auto; border-radius:16px; }
+ .sumn-type-ring { left:62%; top:75vw; width:120%; }
+ .sumn-type-yellow { left:-8%; top:30vw; width:20%; }
+ .sumn-type-copy { width:calc(100% - 40px); margin-top:64px; }
+ .sumn-type-copy h2 { font-size:clamp(30px,7.4vw,42px); }
+ .sumn-type-copy p { margin-top:24px; font-size:16px; line-height:1.8; }
+ .sumn-type-break { display:none; }
+ .sumn-type-sizes { margin-top:40px; gap:20px; font-size:22px; }
+ .sumn-type-sizes li { gap:14px; }
+}

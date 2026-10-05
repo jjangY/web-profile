@@ -15,7 +15,7 @@ button { font: inherit; }
 .hero-header { position: absolute; top: 0; left: 4.1%; right: 4.1%; height: 8.33%; border-bottom: 1px solid #666; }
 .hero-menu { display: flex; align-items: center; justify-content: space-between; width: 28.65cqw; height: 100%; padding: 0; margin: 0 auto; list-style: none; }
 .hero-header nav { height: 100%; }
-.hero-menu span { display: block; padding-block: 1cqw; font-size: .8333cqw; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; white-space: nowrap; }
+.hero-menu a { display: block; padding-block: 1cqw; font-size: .8333cqw; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; white-space: nowrap; }
 .hero-copy { position: absolute; top: 37.3%; left: 7.45%; }
 h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-spacing: 0; }
 .hero-line { display: block; white-space: nowrap; }
@@ -26,13 +26,13 @@ h1 { margin: 0; font-size: 4.58cqw; font-weight: 500; line-height: 1.25; letter-
 .signature { margin: 1.4cqw 0 0; color: #000; font-size: 1.3cqw; font-weight: 600; letter-spacing: .31em; line-height: 1.4; white-space: nowrap; }
 @media (min-width: 761px) and (max-width: 1180px) {
   .hero-menu { width: 42cqw; }
-  .hero-menu span { font-size: 1.15cqw; }
+  .hero-menu a { font-size: 1.15cqw; }
 }
 @media (max-width: 760px) {
   .hero { aspect-ratio: auto; min-height: 700px; height: 100svh; max-height: 1000px; background: linear-gradient(145deg, #fff0ef 0%, #fffdf6 28%, #edf5ff 100%); }
   .hero-header { left: 6%; right: 6%; height: 64px; border-color: #27273133; }
   .hero-menu { width: 100%; }
-  .hero-menu span { font-size: clamp(10px, 2.6cqw, 14px); letter-spacing: .12em; }
+  .hero-menu a { font-size: clamp(10px, 2.6cqw, 14px); letter-spacing: .12em; }
   .hero-copy { top: 94px; left: 5%; width: 90%; text-align: center; }
   h1 { font-size: 7.1cqw; line-height: 1.22; }
   .hero-line:last-child { margin-top: 8px; }
@@ -200,3 +200,9 @@ object-fit: cover; width:100%; aspect-ratio:497 / 777; border-radius:2.395833cqw
   .skill-item ul { margin-top:18px; padding-left:16px; font-size:13px; line-height:1.7; letter-spacing:0; word-break:keep-all; overflow-wrap:anywhere; }
   .skill-item-ai { grid-column:1 / -1; }
 }
+/* Navigation within the portfolio. */
+html { scroll-behavior:smooth; }
+.hero-menu a { color:inherit; text-decoration:none; }
+.hero-menu a:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+#contact-links { scroll-margin-top:32px; }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

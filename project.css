@@ -48,3 +48,20 @@
  .project-curve { top:310px; right:3%; width:24%; opacity:.45; }
  .project-circle { bottom:40px; right:6%; width:56px; }
 }
+
+/* Project introduction typography from the revised Figma file. */
+.project-index { display:block; font-size:1.5625vw; font-weight:700; line-height:1.4; letter-spacing:.02em; }
+.project-label { display:block; font-size:1.041667vw; font-weight:400; line-height:1.4; letter-spacing:.3em; }
+.project-introduction .project-english, .sumn-intro .sumn-tagline { display:flex; align-items:center; justify-content:center; gap:.520833vw; font-size:2.604167vw; line-height:1.4; letter-spacing:.02em; }
+.project-brand { font-weight:700; }
+.project-tagline-copy { font-weight:300; }
+.project-tagline-rule { display:block; width:7.838542vw; height:1px; background:currentColor; flex-shrink:0; }
+@media (max-width:760px) {
+ .project-index { font-size:22px; }
+ .project-label { font-size:14px; }
+ .project-introduction .project-english, .sumn-intro .sumn-tagline { flex-wrap:wrap; gap:12px; font-size:22px; line-height:1.4; }
+ .project-tagline-rule { width:45px; }
+ .project-tagline-copy { flex-basis:100%; }
+}
+
+.project-facts dt { font-weight:700; }

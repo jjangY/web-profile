@@ -1,0 +1,32 @@
+/* Local Figma: PC background-grid-sec-mockup, 1920 × 2058. */
+.mockup-section { position:relative; isolation:isolate; overflow:hidden; color:#000; background:#fffdf9; padding:78.4375vw 0 17.916667vw; }
+.mockup-art { position:absolute; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
+.mockup-grid { position:absolute; display:block; left:0; top:-14.375vw; width:100%; height:140.833333vw; }
+.mockup-balloon { position:absolute; display:block; overflow:hidden; opacity:.4; mix-blend-mode:multiply; transform-origin:top left; }
+.mockup-balloon img { position:absolute; display:block; height:100%; max-width:none; }
+.mockup-balloon-left { left:-10.081473%; top:32.552083vw; width:50.957708%; height:50.834020vw; transform:rotate(11.970deg); }
+.mockup-balloon-left img { width:112.360442%; left:-5.821371%; }
+.mockup-balloon-right { left:48.866501%; top:54.443665vw; width:52.360067%; height:51.136704vw; transform:rotate(-19.035deg); }
+.mockup-balloon-right img { width:112.918663%; left:-6.937799%; }
+.mockup-balloon-small { left:77.447917%; top:16.822001vw; width:22.656167%; height:22.484791vw; transform:rotate(-5.671deg); }
+.mockup-balloon-small img { width:113.476872%; left:-7.177033%; }
+.mockup-device { position:absolute; top:-6.145833vw; left:14.21875%; width:68.854167%; height:auto; display:block; }
+.mockup-description { width:69.0625%; margin:0 auto; text-align:center; }
+.mockup-description h2 { margin:0; font-size:3.125vw; font-weight:700; line-height:1.4; }
+.mockup-description p { margin:2.083333vw 0 0; font-size:1.5625vw; line-height:1.4; word-break:keep-all; }
+@media (min-width:761px) and (max-width:1180px) {
+  .mockup-description { width:85%; }
+  .mockup-description p { font-size:18px; }
+}
+@media (max-width:760px) {
+  .mockup-section { padding:0 0 100px; }
+  .mockup-grid { top:0; height:100%; object-fit:cover; }
+  .mockup-device { position:relative; top:auto; left:auto; width:115%; max-width:none; margin:-6% 0 0 -7.5%; }
+  .mockup-description { position:relative; width:calc(100% - 40px); margin:28px auto 0; }
+  .mockup-description h2 { font-size:clamp(30px,7.4vw,42px); }
+  .mockup-description p { margin:24px auto 0; max-width:480px; font-size:16px; line-height:1.8; }
+  .mockup-desktop-break { display:none; }
+  .mockup-balloon-left { top:35vw; left:-28%; width:75%; height:75vw; }
+  .mockup-balloon-right { top:93vw; left:60%; width:80%; height:80vw; }
+  .mockup-balloon-small { top:6vw; left:76%; width:34%; height:34vw; }
+}
