@@ -12,7 +12,7 @@ window.DETAIL_GALLERY = [
     thumbnail: "./assets/detail/detail-01.jpg",
     fullImage: "./assets/detail/detail-full-01.jpg",
     alt: "SUMN 로션 상세페이지 디자인",
-    title: "SUMN Lotion Product Detail",
+    title: "SUMN Lotion Product Detail Page",
     description: "제품의 촉촉하고 부드러운 이미지를 중심으로 비주얼을 구성하고, 주요 특징과 성분 정보가 자연스럽게 이어지도록 디자인했습니다.",
     pdf: "./assets/detail/detail-1-jyw.pdf"
   },
@@ -28,7 +28,7 @@ window.DETAIL_GALLERY = [
     thumbnail: "./assets/detail/detail-03.jpg",
     fullImage: "./assets/detail/detail-full-03.jpg",
     alt: "MOONEAF 강아지 샴푸 상세페이지 디자인",
-    title: "MOONEAF Calm Dew Pet Shampoo Detail",
+    title: "MOONEAF Calm Dew Pet Shampoo Detail Page",
     description: "내추럴한 베이지 톤과 부드러운 곡선형 레이아웃을 활용해 브랜드 무드를 표현하고, 제품과 반려견이 돋보이는 따뜻한 비주얼로 제작했습니다.",
     pdf: ""
   }
