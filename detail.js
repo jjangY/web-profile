@@ -110,7 +110,9 @@
       thumbnail.append(img);
     } else thumbnail.append(placeholder(index));
     preview.append(thumbnail, make('span', 'detail-cta', full || pdf ? '상세페이지 보기 ↗' : '준비 중'));
-    card.append(preview, make('h3', '', title), make('p', 'detail-description', item.description || ''));
+    const copy = make('div', 'detail-copy');
+    copy.append(make('h3', '', title), make('p', 'detail-description', item.description || ''));
+    card.append(preview, copy);
     list.append(card);
   });
 })();
