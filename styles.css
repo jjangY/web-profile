@@ -219,3 +219,7 @@ html { scroll-behavior:smooth; }
 }
 @media (min-width:761px) and (max-width:1180px) { .skills-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
 @media (max-width:480px) { .skills-grid { grid-template-columns:1fr; } .skill-item ul { font-size:14px; } }
+
+/* Blend the Git and GitHub icons into the skills panel. */
+.skill-item[aria-labelledby="skill-git"] .skill-icon { mix-blend-mode:multiply; }
+.skill-item[aria-labelledby="skill-git"] .skill-icon img { mix-blend-mode:multiply; border-radius:50%; }
