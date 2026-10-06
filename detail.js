@@ -18,6 +18,9 @@
   close.type = 'button';
   close.setAttribute('aria-label', '상세페이지 닫기');
   const content = make('div', 'detail-dialog-content');
+  content.tabIndex = 0;
+  content.setAttribute('role', 'region');
+  content.setAttribute('aria-label', '상세페이지 이미지');
   toolbar.append(heading, close);
   shell.append(toolbar, content);
   dialog.append(shell);
@@ -48,6 +51,7 @@
     if (gap > 0) document.body.style.paddingRight = (padding + gap) + 'px';
     locked = true;
     dialog.scrollTop = 0;
+    content.scrollTop = 0;
     close.focus({ preventScroll:true });
   }
   close.addEventListener('click', () => dialog.close());

@@ -206,3 +206,16 @@ html { scroll-behavior:smooth; }
 .hero-menu a:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
 #contact-links { scroll-margin-top:32px; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+/* Revised local Figma: four skills above, three below. */
+.skill-item-ai { grid-column:auto; }
+@media (min-width:1181px) {
+ .skills-panel { padding:3.802083cqw 2.8125cqw 3.25cqw; }
+ .skills-panel h3 { margin-bottom:1.71875cqw; }
+ .skills-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.614583cqw 1.354167cqw; }
+ .skill-icon,.skill-item-small-icon .skill-icon { height:1.594271cqw; gap:.429167cqw; }
+ .skill-item h4 { font-size:1.115625cqw; margin-top:.429167cqw; line-height:1.22; }
+ .skill-item ul { font-size:.772221cqw; margin-top:1.716042cqw; padding-left:.9cqw; line-height:1.42; }
+}
+@media (min-width:761px) and (max-width:1180px) { .skills-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:480px) { .skills-grid { grid-template-columns:1fr; } .skill-item ul { font-size:14px; } }

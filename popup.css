@@ -68,3 +68,5 @@
   .popup-description { font-size:15px; margin-top:24px; line-height:1.8; }
 }
 @media (prefers-reduced-motion:reduce) { .popup-detail { transition:none; transform:none; } }
+.popup-meta dt { font-weight:700; }
+.popup-meta dd { font-weight:400; }
