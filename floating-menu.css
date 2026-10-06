@@ -25,3 +25,7 @@
 .back-to-top:hover,.back-to-top:active,.back-to-top:focus-visible { color:#938269; }
 @media (max-width:760px) { .back-to-top { right:10px; bottom:56px; width:44px; height:44px; } }
 @media (prefers-reduced-motion:reduce) { .back-to-top { transition:none; } }
+
+/* Let links beneath the menu’s transparent layout area receive taps. */
+.floating-menu { pointer-events:none; }
+.floating-menu-toggle, .back-to-top, .floating-menu.is-open .floating-menu-panel { pointer-events:auto; }
