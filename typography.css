@@ -91,3 +91,6 @@
   flex-basis:auto; width:100%; text-align:center;
  }
 }
+
+/* Regular-weight usage descriptions in both underlined typography tables. */
+.brand-type-use, .brand-type-row-body .brand-type-use { font-size:20px; font-weight:400; }
