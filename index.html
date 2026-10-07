@@ -56,8 +56,11 @@
   <script src="./contact.js" defer></script>
   <link rel="stylesheet" href="./floating-menu.css?v=20261007-icon">
   <script src="./floating-menu.js?v=20261007-icon" defer></script>
-  <script src="./scroll-reveal.js?v=20261006-thanks" defer></script>
+  <script src="./scroll-reveal.js?v=20261007-webtoon" defer></script>
   <link rel="stylesheet" href="./typography.css?v=20261007-type-descriptions">
+  <link rel="stylesheet" href="./webtoon.css?v=20261007b">
+  <script src="./webtoon-data.js?v=20261007" defer></script>
+  <script src="./webtoon.js?v=20261007b" defer></script>
 </head>
 
 <body>
@@ -623,7 +626,7 @@
         </figure>
       </div>
     </section>
-    <section class="portfolio-closing" id="contact" aria-label="SUMN 홈페이지와 디자이너 연락 정보">
+    <section class="portfolio-closing" id="sumn-showcase" aria-label="SUMN 홈페이지">
       <img class="closing-grid" src="./assets/contact/background-grid-12.jpg" alt="" aria-hidden="true" loading="lazy"
         decoding="async">
       <div class="closing-tablet"><img src="./assets/contact/sumn-tablet.png" width="2144" height="1500"
@@ -636,7 +639,28 @@
           <path d="M14 3h7v7M21 3 10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" />
         </svg>
       </a>
-      <footer class="closing-contact">
+    </section>
+    <section class="webtoon-section" id="webtoon" aria-labelledby="webtoon-title">
+      <div class="webtoon-art" aria-hidden="true">
+        <img class="webtoon-grid" src="./assets/webtoon/background-grid.jpg" alt="" loading="lazy" decoding="async">
+        <img class="webtoon-ring" src="./assets/webtoon/rainbow-ring.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="webtoon-layout">
+        <ol class="webtoon-list" aria-label="웹툰 작업물"></ol>
+        <div class="webtoon-sidebar">
+          <div class="webtoon-intro">
+            <header class="webtoon-heading">
+              <p class="webtoon-eyebrow" lang="en">Beyond Design</p>
+              <h2 id="webtoon-title" lang="en">WEBTOON PROJECT</h2>
+            </header>
+            <p>아이돌 메신저 플랫폼에서 아티스트 IP를 활용한 웹툰 콘텐츠를 기획·제작(연재)하였습니다.</p>
+            <p>귀여운 캐릭터와 코믹한 연출을 바탕으로 따뜻한 이야기를 담은<br>웹툰 콘텐츠를 제작했습니다.</p>
+          </div>
+          <div class="webtoon-descriptions"></div>
+        </div>
+      </div>
+    </section>
+      <footer class="closing-contact" id="contact" aria-label="디자이너 연락 정보">
         <img class="closing-thanks" src="./assets/contact/thank-you.png" width="1536" height="1024" alt="Thank you"
           loading="lazy" decoding="async">
         <p class="closing-message">사용자의 시선에서 세심하게 관찰하고, 작은 디테일까지 놓치지 않는 디자이너가 되고 싶습니다.<br class="closing-desktop-break">
@@ -649,7 +673,7 @@
           <a class="closing-link" href="mailto:aodtnsdoden@gmail.com">aodtnsdoden@gmail.com</a>
         </div>
       </footer>
-    </section>
+
 
   </main>
   <div class="floating-menu" hidden>

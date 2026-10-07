@@ -5,7 +5,7 @@
   if (preference.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
 
   const down = [
-    '.about-eyebrow', '#about-title', '.capabilities-eyebrow', '#capabilities-title',
+    '.webtoon-heading', '.about-eyebrow', '#about-title', '.capabilities-eyebrow', '#capabilities-title',
     '.capabilities-description', '.works-eyebrow', '#works-title',
     '#popup-title', '#poster-title', '.banner-heading', '#detail-title', '#project-title',
     '#geulgil-title', '.project-number', '.project-english', '.project-about h4',
