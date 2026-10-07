@@ -1,0 +1,93 @@
+/* Typography from the local Figma PC frame (1920px), revised 2026-10-07.
+   Small desktop text has a readability floor; tablet/mobile rules remain in section styles.
+   Explicitly requested popup metadata/descriptions and poster descriptions stay at 20px on PC. */
+@media (min-width:1181px) {
+  .hero-menu a { font-size:.833333333cqw; }
+  .hero-line:first-child { font-size:4.635416667cqw; }
+  .word-slowly { font-size:5.208333333cqw; }
+  .hero-line:last-child { font-size:4.479166667cqw; }
+  .signature { font-size:1.354166667cqw; }
+  .about-heading h2 { font-size:3.59375cqw; }
+  .about-principle-heading > span { font-size:2.03125cqw; }
+  .about-eyebrow, .about-principle-heading h3, .about-principle p,
+  .capabilities-eyebrow, .capabilities-description, .skill-item h4,
+  .works-summary, .popup-intro p, .poster-heading p, .banner-heading p,
+  .detail-heading p, .project-heading p, .project-introduction .project-description,
+  .project-facts, .mockup-description p, .brand-logo-copy p, .brand-type-heading p,
+  .brand-device-sizes, .sumn-description, .sumn-facts, .sumn-design p,
+  .sumn-type-copy p, .sumn-type-sizes, .sumn-color-heading p,
+  .sumn-brand-colors, .sumn-beige-palette figcaption, .closing-message {
+    font-size:clamp(16px,1.041666667vw,20px);
+  }
+  .skill-item ul { font-size:clamp(14px,.77222089vw,14.826641px); }
+  .popup-meta, .popup-description, .poster-copy p { font-size:20px; }
+  .popup-meta { grid-template-columns:minmax(60px,4.8cqw) minmax(0,1fr); }
+  .popup-meta dt { font-weight:700; }
+  .popup-meta dd { font-weight:400; }
+  .poster-copy h3 { font-size:clamp(22px,1.745859583vw,33.520504px); }
+  .detail-card h3 { font-size:clamp(18px,1.145833333vw,22px); }
+  .detail-description { font-size:16px; }
+  .project-introduction .project-english, .sumn-intro .sumn-tagline { font-size:2.083333333vw; }
+  .brand-type-use, .brand-type-row-body .brand-type-use { font-size:1.5625vw; }
+  .closing-link { font-size:18px; }
+  .geulgil-visit, .sumn-visit {
+    font-size:1.5625vw;
+    width:max-content;
+    padding-inline:1.041666667vw;
+  }
+}
+/* Keep the device-size annotations subordinate to the section headings on smaller screens. */
+@media (min-width:761px) and (max-width:1180px) {
+  .about-eyebrow, .brand-device-sizes, .sumn-type-sizes { font-size:18px; }
+}
+@media (max-width:760px) {
+  .brand-device-sizes, .sumn-type-sizes { font-size:16px; }
+}
+
+/* Local Figma: 207px annotation rows, 80px labels, 17.26px column gap. */
+.brand-device-sizes, .sumn-type-sizes {
+ width:207px; max-width:calc(100% - 40px); gap:70px; font-size:20px; line-height:24px;
+}
+.brand-device-sizes li, .sumn-type-sizes li {
+ display:grid; grid-template-columns:80px minmax(0,1fr); gap:17.2566px;
+ align-items:baseline; justify-content:initial; text-align:left;
+}
+/* Homepage links retain the design proportions at a smaller, 20px type size. */
+.geulgil-visit, .sumn-visit {
+ box-sizing:border-box; height:44px; min-height:44px; padding:7px 28px;
+ font-size:20px; line-height:28px; gap:13px; border-radius:7px; letter-spacing:0;
+}
+.geulgil-visit { width:207.34px; }
+.sumn-visit { width:232px; }
+.geulgil-visit svg, .sumn-visit svg { width:20px; height:20px; }
+/* Contact buttons: Figma widths 196 / 202 / 280, height 49, vertical gap 16. */
+.closing-links { gap:16px; }
+.closing-link {
+ box-sizing:border-box; height:49px; min-height:49px; padding:11px 30px;
+ font-size:18px; line-height:25px; letter-spacing:0; max-width:100%;
+}
+.closing-link.resume-link { width:196px; }
+.closing-link[href^="tel:"] { width:202px; }
+.closing-link[href^="mailto:"] { width:280px; }
+@media (max-width:1180px) {
+ .brand-device-sizes, .sumn-type-sizes { width:186px; gap:40px; font-size:18px; }
+ .brand-device-sizes li, .sumn-type-sizes li { grid-template-columns:72px minmax(0,1fr); gap:15px; }
+}
+@media (max-width:760px) {
+ .brand-device-sizes, .sumn-type-sizes { width:166px; gap:28px; font-size:16px; }
+ .brand-device-sizes li, .sumn-type-sizes li { grid-template-columns:64px minmax(0,1fr); gap:14px; }
+ .geulgil-visit, .sumn-visit { width:max-content; max-width:calc(100% - 40px); font-size:16px; padding:7px 20px; gap:10px; }
+ .closing-link { font-size:16px; padding:11px 24px; }
+}
+
+/* Mobile project names and taglines stack on separate centered lines. */
+@media (max-width:760px) {
+ .project-introduction .project-english, .sumn-intro .sumn-tagline {
+  flex-direction:column; flex-wrap:nowrap; align-items:center; gap:12px; text-align:center;
+ }
+ .project-tagline-rule, .sumn-tagline-rule { display:none; }
+ .project-english .project-brand, .sumn-tagline .project-brand,
+ .project-english .project-tagline-copy, .sumn-tagline .project-tagline-copy {
+  flex-basis:auto; width:100%; text-align:center;
+ }
+}

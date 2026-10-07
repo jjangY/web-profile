@@ -29,3 +29,16 @@
 /* Let links beneath the menu’s transparent layout area receive taps. */
 .floating-menu { pointer-events:none; }
 .floating-menu-toggle, .back-to-top, .floating-menu.is-open .floating-menu-panel { pointer-events:auto; }
+
+/* Compact icon toggle; preserve click-only opening and closing. */
+.floating-menu-toggle { display:grid; place-items:center; width:48px; height:48px; border-radius:12px; }
+.menu-icon { display:block; width:28px; height:28px; }
+.menu-close { display:none; font-size:28px; font-weight:400; line-height:1; }
+.floating-menu-toggle[aria-expanded="true"] .menu-icon { display:none; }
+.floating-menu-toggle[aria-expanded="true"] .menu-close { display:block; }
+.back-to-top { right:0; }
+@media (max-width:760px) {
+ .floating-menu-toggle { width:44px; height:44px; border-radius:10px; }
+ .menu-icon { width:26px; height:26px; }
+ .back-to-top { right:0; }
+}

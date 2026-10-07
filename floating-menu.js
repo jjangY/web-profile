@@ -20,7 +20,7 @@
   function setOpen(value, restoreFocus = false) {
     open = value;
     menu.classList.toggle('is-open', open);
-    toggle.textContent = open ? 'X' : 'MENU';
+    // The icon and close mark are switched by aria-expanded in CSS.
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? '페이지 메뉴 닫기' : '페이지 메뉴 열기');
     panel.inert = !open;
