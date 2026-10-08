@@ -13,12 +13,24 @@
   const block=make('div','webtoon-copy '+cls);
   if(Array.isArray(item.sections)) {
    block.classList.add('has-sequence');
-   item.sections.forEach(part=>{
+   item.sections.forEach((part,partIndex)=>{
     const group=make('div','webtoon-copy-set');
     group.append(make('h3','',part.title));
     const body=make('div','webtoon-copy-body');
     body.append(make('p','webtoon-description',part.description));
-    group.append(body); block.append(group);
+    group.append(body);
+    if(partIndex===item.sections.length-1 && item.link?.url) {
+     const link=make('a','geulgil-visit webtoon-visit');
+     link.href=item.link.url;
+     link.target='_blank'; link.rel='noopener noreferrer';
+     const label=item.link.label || '작품 바로가기';
+     link.setAttribute('aria-label',label+' — 새 탭에서 열기');
+     link.append(make('span','',label));
+     const icon=document.querySelector('.geulgil-visit svg');
+     if(icon) link.append(icon.cloneNode(true));
+     group.append(link);
+    }
+    block.append(group);
    });
    return block;
   }

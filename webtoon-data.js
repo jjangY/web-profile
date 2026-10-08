@@ -49,6 +49,11 @@ window.WEBTOON_WORKS = [
   },
   {
     type: 'process',
+    // 작품 버튼: 아래 label은 문구, url은 이동할 주소입니다.
+    link: {
+      label: '작품 바로가기',
+      url: 'https://webtoon.pocketdols.com/episode_view?episode_no=36&set_locale=ko'
+    },
     steps: ['콘티', '작업 분담', '작화', '피드백', '수정', '최종 공개'],
     sections: [
       {

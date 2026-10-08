@@ -89,3 +89,6 @@
  .webtoon-process.will-reveal { opacity:1; transform:none; transition:none; }
  .webtoon-section.is-enhanced .has-sequence .webtoon-copy-set { transition:none; transform:none; }
 }
+
+/* Reuse the homepage button style; keep it below the final description. */
+.webtoon-copy .webtoon-visit { margin:28px 0 0; }
