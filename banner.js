@@ -27,7 +27,9 @@
     return el;
   };
   let active = 0, timer = null, inView = false, paused = preference.matches;
-  const buttons = [];
+  const buttons = [], captions = [];
+  const captionArea = make('div', 'banner-captions');
+  viewport.insertAdjacentElement('afterend', captionArea);
   const slides = config.items.map((item, i) => {
     const slide = make('figure', 'banner-slide');
     slide.setAttribute('role', 'group');
@@ -42,6 +44,11 @@
       slide.append(img);
     } else slide.append(placeholder(i));
     viewport.append(slide);
+    const caption = make('div', 'banner-caption');
+    caption.id = 'banner-caption-' + (i + 1);
+    caption.append(make('h3', '', item.title || item.alt || '배너 디자인'), make('p', '', item.description || ''));
+    captionArea.append(caption); captions.push(caption);
+    slide.setAttribute('aria-describedby', caption.id);
     const button = make('button', 'banner-dot');
     button.type = 'button';
     button.setAttribute('aria-label', `배너 ${i + 1} 보기`);
@@ -55,12 +62,24 @@
     buttons.push(button);
     return slide;
   });
+  function alignCaptions() {
+    const width = viewport.clientWidth, height = viewport.clientHeight;
+    if (!width || !height) return;
+    slides.forEach((slide, i) => {
+      const img = slide.querySelector('img');
+      const paintedWidth = img?.naturalWidth && img.naturalHeight
+        ? Math.min(width, height * img.naturalWidth / img.naturalHeight) : width;
+      captions[i].style.width = (paintedWidth / width * 100) + '%';
+    });
+  }
   function select(index) {
     active = index;
     slides.forEach((slide, i) => {
       slide.classList.toggle('is-active', i === active);
       slide.setAttribute('aria-hidden', String(i !== active));
       buttons[i].setAttribute('aria-pressed', String(i === active));
+      captions[i].classList.toggle('is-active', i === active);
+      captions[i].setAttribute('aria-hidden', String(i !== active));
     });
   }
   function sync() {
@@ -76,8 +95,16 @@
   document.addEventListener('visibilitychange', sync);
   preference.addEventListener('change', () => { if (preference.matches) paused = true; sync(); });
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver(entries => { inView = entries[0].isIntersecting; sync(); }, { threshold:0.15 }).observe(viewport);
-  } else inView = true;
+    new IntersectionObserver(entries => { inView = entries[0].isIntersecting; gallery.classList.toggle('is-in-view', inView); sync(); }, { threshold:0.15 }).observe(viewport);
+  } else { inView = true; gallery.classList.add('is-in-view'); }
+  slides.forEach(slide => {
+    const img = slide.querySelector('img');
+    img?.addEventListener('load', alignCaptions);
+    img?.addEventListener('error', alignCaptions);
+  });
+  if ('ResizeObserver' in window) new ResizeObserver(alignCaptions).observe(viewport);
+  window.addEventListener('resize', alignCaptions);
+  alignCaptions();
   select(0);
   gallery.querySelector('.banner-controls').hidden = false;
   sync();

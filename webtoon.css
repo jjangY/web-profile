@@ -92,3 +92,12 @@
 
 /* Reuse the homepage button style; keep it below the final description. */
 .webtoon-copy .webtoon-visit { margin:28px 0 0; }
+
+/* Main webtoon introduction: bold, responsive type. */
+.webtoon-intro > .webtoon-lead { font-size:26px; font-weight:700; line-height:1.5; word-break:keep-all; overflow-wrap:anywhere; }
+@media (min-width:761px) and (max-width:1180px) {
+ .webtoon-intro > .webtoon-lead { font-size:22px; }
+}
+@media (max-width:760px) {
+ .webtoon-intro > .webtoon-lead { font-size:18px; line-height:1.6; }
+}
